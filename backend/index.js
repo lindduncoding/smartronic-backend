@@ -4,7 +4,7 @@ import DataRouter from './server/route/data.js'
 import * as DB from './server/controllers/mongoDBController.js'
 
 const app = new Express()
-const client = connect("mqtt://10.72.42.36")
+const client = connect("mqtt://10.148.49.210")
 
 client.on('connect', (connack) => {
   console.log('Connected')

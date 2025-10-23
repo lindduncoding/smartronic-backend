@@ -1,3 +1,6 @@
 .env
 node_modules
 package-lock.json
+mosquitto/log
+mosquitto/data
+mosquitto/log/mosquitto.log

@@ -1,11 +1,4 @@
 services:
-  smartronic:
-    build: ./backend
-    container_name: smartronic
-    env_file: ".env"
-    ports:
-      - "3000:3000"
-
   mosquitto:
     image: eclipse-mosquitto:latest
     container_name: mosquitto
@@ -18,3 +11,24 @@ services:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
+
+  mongo:
+    image: mongo:5
+    container_name: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo/init.js:/docker-entrypoint-initdb.d/init.js:ro
+    env_file: ".env"
+
+  smartronic:
+    build: ./backend
+    container_name: smartronic
+    restart: always
+    env_file: ".env"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "mongo"
+      - "mosquitto"

@@ -15,3 +15,37 @@
 1761195557: New connection from 172.21.0.1:45858 on port 1883.
 1761195557: New client connected from 172.21.0.1:45858 as auto-ACC19A58-C04C-1F06-C06D-916B19B8FFDF (p2, c1, k60).
 1761195557: Client auto-ACC19A58-C04C-1F06-C06D-916B19B8FFDF disconnected.
+1761195830: Client mqttjs_a4b45772 has exceeded timeout, disconnecting.
+1761195892: New connection from 172.21.0.1:52304 on port 1883.
+1761195892: New client connected from 172.21.0.1:52304 as mqttjs_fe6f164a (p2, c1, k60).
+1761195896: Client mqttjs_fe6f164a closed its connection.
+1761195998: New connection from 172.21.0.1:41644 on port 1883.
+1761195998: New client connected from 172.21.0.1:41644 as mqttjs_730809a8 (p2, c1, k60).
+1761197261: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1761198479: Client mqttjs_730809a8 closed its connection.
+1761198481: New connection from 172.21.0.1:53174 on port 1883.
+1761198481: New client connected from 172.21.0.1:53174 as mqttjs_7489fe44 (p2, c1, k60).
+1761198568: New connection from 172.21.0.1:44654 on port 1883.
+1761198568: New client connected from 172.21.0.1:44654 as auto-D19ACB7D-E439-3519-584E-860DB99E6F03 (p2, c1, k60).
+1761198568: Client auto-D19ACB7D-E439-3519-584E-860DB99E6F03 disconnected.
+1761198569: New connection from 172.21.0.1:54564 on port 1883.
+1761198569: New client connected from 172.21.0.1:54564 as auto-219BF591-3480-9F35-4475-3044FC980478 (p2, c1, k60).
+1761198569: Client auto-219BF591-3480-9F35-4475-3044FC980478 disconnected.
+1761198647: Client mqttjs_7489fe44 closed its connection.
+1761198649: New connection from 172.21.0.1:51988 on port 1883.
+1761198649: New client connected from 172.21.0.1:51988 as mqttjs_bb92514b (p2, c1, k60).
+1761198663: New connection from 172.21.0.1:39714 on port 1883.
+1761198663: New client connected from 172.21.0.1:39714 as auto-80C1212F-40D3-007F-E258-B4D711E19BBE (p2, c1, k60).
+1761198663: Client auto-80C1212F-40D3-007F-E258-B4D711E19BBE disconnected.
+1761198675: New connection from 172.21.0.1:42994 on port 1883.
+1761198675: New client connected from 172.21.0.1:42994 as auto-B7FC1B1D-03FC-BF20-D4E7-E83E8397D8EA (p2, c1, k60).
+1761198675: Client auto-B7FC1B1D-03FC-BF20-D4E7-E83E8397D8EA disconnected.
+1761198799: Client mqttjs_bb92514b has exceeded timeout, disconnecting.
+1761198863: New connection from 172.21.0.1:36802 on port 1883.
+1761198863: New client connected from 172.21.0.1:36802 as mqttjs_889d8182 (p2, c1, k60).
+1761198925: New connection from 172.21.0.1:52570 on port 1883.
+1761198925: New client connected from 172.21.0.1:52570 as auto-0BA6F613-6868-CD69-F697-6D0D056E9DB4 (p2, c1, k60).
+1761198925: Client auto-0BA6F613-6868-CD69-F697-6D0D056E9DB4 disconnected.
+1761198965: New connection from 172.21.0.1:59318 on port 1883.
+1761198965: New client connected from 172.21.0.1:59318 as auto-28DA6D84-B0D5-E51D-E9E5-E37651C336AB (p2, c1, k60).
+1761198965: Client auto-28DA6D84-B0D5-E51D-E9E5-E37651C336AB disconnected.

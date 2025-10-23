@@ -6,14 +6,19 @@ import Speed from '../model/Speed.js'
 dotenv.config()
 
 // Retrieve from .env file
-const DB_USER = process.env.DB_USER ?? 'username'
-const DB_PASS = process.env.DB_PASS ?? 'password'
-const DB_URL = process.env.DB_URL ?? 'user.mongodb.net'
+const DB_USER = process.env.MONGO_INITDB_ROOT_USERNAME ?? process.env.DB_USER ??  'username'
+const DB_PASS = process.env.MONGO_INITDB_ROOT_PASSWORD ?? process.env.DB_PASS ?? 'password'
+const DB_URL = process.env.MONGO_INITDB_DATABASE ?? process.env.DB_URL ?? 'user.mongodb.net'
 
-const uri = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_URL}/?retryWrites=true&w=majority&appName=speed`
+// Cloud deployment
+// const uri = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_URL}/?retryWrites=true&w=majority&appName=speed`
+
+// Local/docker deployment
+const uri = `mongodb://${DB_USER}:${DB_PASS}@mongo:27017/${DB_URL}?authSource=admin`
 
 mongoose.connect(uri)
-
+  .then(() => console.log("MongoDB connected"))
+  .catch(err => console.error("❌ MongoDB connection error:", err))
 
 // Insertion
 export async function insertSpeed(message) {
