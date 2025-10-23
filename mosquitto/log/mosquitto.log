@@ -1,0 +1,17 @@
+1761195461: mosquitto version 2.0.22 starting
+1761195461: Config loaded from /mosquitto/config/mosquitto.conf.
+1761195461: Opening ipv4 listen socket on port 1883.
+1761195461: Opening ipv6 listen socket on port 1883.
+1761195461: Opening websockets listen socket on port 9001.
+1761195461: mosquitto version 2.0.22 running
+1761195474: New connection from 172.21.0.1:45558 on port 1883.
+1761195474: New client connected from 172.21.0.1:45558 as auto-3E27524A-31AA-ED77-3B67-AEA022DFEF6C (p2, c1, k60).
+1761195474: Client auto-3E27524A-31AA-ED77-3B67-AEA022DFEF6C disconnected.
+1761195500: New connection from 172.21.0.1:36392 on port 1883.
+1761195500: New client connected from 172.21.0.1:36392 as mqttjs_a4b45772 (p2, c1, k60).
+1761195503: New connection from 172.21.0.1:36396 on port 1883.
+1761195503: New client connected from 172.21.0.1:36396 as auto-978764AF-9F7E-01C9-1022-02BBF09370BA (p2, c1, k60).
+1761195503: Client auto-978764AF-9F7E-01C9-1022-02BBF09370BA disconnected.
+1761195557: New connection from 172.21.0.1:45858 on port 1883.
+1761195557: New client connected from 172.21.0.1:45858 as auto-ACC19A58-C04C-1F06-C06D-916B19B8FFDF (p2, c1, k60).
+1761195557: Client auto-ACC19A58-C04C-1F06-C06D-916B19B8FFDF disconnected.

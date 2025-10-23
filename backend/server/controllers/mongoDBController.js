@@ -20,7 +20,8 @@ export async function insertSpeed(message) {
   try {
     await Speed.create({
       timestamp: message.timestamp,
-      speed: message.speed
+      speed: message.speed,
+      density: message.density
     })
   } catch (err) {
     console.error('Error at: ', err)

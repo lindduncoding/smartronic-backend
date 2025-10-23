@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
 
-    mosquitto:
+  mosquitto:
     image: eclipse-mosquitto:latest
     container_name: mosquitto
     restart: unless-stopped
