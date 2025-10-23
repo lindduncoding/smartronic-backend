@@ -2,8 +2,10 @@ import { connect } from 'mqtt'
 import Express from 'express'
 import DataRouter from './server/route/data.js'
 import * as DB from './server/controllers/mongoDBController.js'
+import cors from 'cors'
 
 const app = new Express()
+app.use(cors())
 const client = connect("mqtt://10.148.49.210")
 
 client.on('connect', (connack) => {
