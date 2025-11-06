@@ -6,12 +6,12 @@ import cors from 'cors'
 
 const app = new Express()
 app.use(cors())
-const client = connect("mqtt://10.148.49.210")
+const client = connect("mqtt://10.147.180.210")
 
 client.on('connect', (connack) => {
   console.log('Connected')
   // Subscribe to a topic named testtopic with QoS 0
-  client.subscribe('test', { qos: 0 }, function (error, granted) {
+  client.subscribe('smartronic', { qos: 0 }, function (error, granted) {
     if (error) {
       console.log(error)
     } else {
@@ -24,7 +24,7 @@ client.on('message', async (topic, payload, packet) => {
   // Payload is Buffer
   const json = JSON.parse(payload)
   console.log(`Topic: ${topic}, Message: ${json}, QoS: ${packet.qos}`)
-  console.log(`Message: ${json.speed}`)
+  console.log(`Message: ${json.speed}, ${json.density}, ${json.bump}`)
 
   // Insertion
   await DB.insertSpeed(json)

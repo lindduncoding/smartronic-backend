@@ -16,6 +16,9 @@ const DB_URL = process.env.MONGO_INITDB_DATABASE ?? process.env.DB_URL ?? 'user.
 // Local/docker deployment
 const uri = `mongodb://${DB_USER}:${DB_PASS}@mongo:27017/${DB_URL}?authSource=admin`
 
+// Timestamp
+const date = new Date()
+
 mongoose.connect(uri)
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.error("❌ MongoDB connection error:", err))
@@ -24,10 +27,12 @@ mongoose.connect(uri)
 export async function insertSpeed(message) {
   try {
     await Speed.create({
-      timestamp: message.timestamp,
+      timestamp: date,
       speed: message.speed,
-      density: message.density
+      density: message.density,
+      bump: message.bump
     })
+    console.log("Inserted speed data!")
   } catch (err) {
     console.error('Error at: ', err)
   }

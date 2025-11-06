@@ -4,7 +4,8 @@ const { Schema, model } = mongoose
 const speedSchema = new Schema({
   timestamp: Date,
   speed: Number,
-  density: Number
+  density: Number,
+  bump: Number
 })
 
 const Speed = model('Speed', speedSchema, 'speed')
