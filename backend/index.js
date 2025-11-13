@@ -3,15 +3,24 @@ import Express from 'express'
 import DataRouter from './server/route/data.js'
 import * as DB from './server/controllers/mongoDBController.js'
 import cors from 'cors'
+import dotenv from 'dotenv'
 
+// Read .env file
+dotenv.config()
+
+// Backend Initialization
 const app = new Express()
 app.use(cors())
-const client = connect("mqtt://10.147.180.210")
+
+// MQTT Initialization
+const MQTT_URL = process.env.MQTT_URL ?? "mqtt://10.62.137.210"
+const MQTT_TOPIC = process.env.MQTT_TOPIC ?? 'smartonic'
+const client = connect(MQTT_URL)
 
 client.on('connect', (connack) => {
   console.log('Connected')
   // Subscribe to a topic named testtopic with QoS 0
-  client.subscribe('smartronic', { qos: 0 }, function (error, granted) {
+  client.subscribe(MQTT_TOPIC, { qos: 0 }, function (error, granted) {
     if (error) {
       console.log(error)
     } else {
