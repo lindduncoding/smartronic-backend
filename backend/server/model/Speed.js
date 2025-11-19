@@ -8,5 +8,5 @@ const speedSchema = new Schema({
   bump: Number
 })
 
-const Speed = model('Speed', speedSchema, 'speed')
+const Speed = model('Speed', speedSchema, 'speed_prod')
 export default Speed

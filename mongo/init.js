@@ -1,4 +1,4 @@
-db = db.getSiblingDB('speed');
+db = db.getSiblingDB('speed_prod');
 
 db.createCollection("measurements", {
   timeseries: {

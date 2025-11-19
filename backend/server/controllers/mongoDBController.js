@@ -41,7 +41,7 @@ export async function insertSpeed(message) {
 // Get summarized weather data
 export async function getSpeed () {
   try {
-    const latest = await Speed.find().sort({ timestamp: -1 });
+    const latest = await Speed.find().sort({ timestamp: 1 });
     return latest
   } catch (err) {
     console.error('Error at: ', err)

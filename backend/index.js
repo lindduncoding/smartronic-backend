@@ -15,7 +15,11 @@ app.use(cors())
 // MQTT Initialization
 const MQTT_URL = process.env.MQTT_URL ?? "mqtt://10.62.137.210"
 const MQTT_TOPIC = process.env.MQTT_TOPIC ?? 'smartonic'
-const client = connect(MQTT_URL)
+const client = connect(MQTT_URL, {
+  clientId: "smartonic-backend",
+  clean: false,
+  reconnectPeriod: 2000,
+})
 
 client.on('connect', (connack) => {
   console.log('Connected')
@@ -28,6 +32,20 @@ client.on('connect', (connack) => {
     }
   })
 })
+
+// Debugging
+client.on("reconnect", () => {
+  console.log("Reconnecting to MQTT...")
+})
+
+client.on("close", () => {
+  console.log("MQTT connection closed")
+})
+
+client.on("error", (err) => {
+  console.error("MQTT error:", err)
+})
+
 
 client.on('message', async (topic, payload, packet) => {
   // Payload is Buffer
